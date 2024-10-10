@@ -1,0 +1,22 @@
+{% extends 'myapp/base.html' %}
+{% block body %}
+
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;"> 
+    <div class="row">
+        <div class="col-md-10">
+            <form class="p-3 shadow" method="POST"> 
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter Task">    
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="priority" id="priority" placeholder="Enter task priority">
+                </div>
+            
+                <input class="btn btn-primary " type="submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

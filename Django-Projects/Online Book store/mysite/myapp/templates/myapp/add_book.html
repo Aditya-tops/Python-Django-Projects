@@ -1,0 +1,25 @@
+<form action="" method="POST" enctype="multipart/form-data" class="mt-4">
+    {% csrf_token %}
+    
+    <div class="form-group">
+        <label for="name">Book Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter name of book" required>
+    </div><br>
+
+    <div class="form-group">
+        <label for="desc">Book Description</label>
+        <input type="text" name="desc" id="desc" class="form-control" placeholder="Enter book description" required>
+    </div><br>
+
+    <div class="form-group">
+        <label for="price">Book Price</label>
+        <input type="number" name="price" id="price" class="form-control" placeholder="Enter book price" required>
+    </div><br>
+
+    <div class="form-group">
+        <label for="book_image">Book Image</label>
+        <input type="file" name="book_image" id="book_image" class="form-control-file">
+    </div><br>
+
+    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+</form>
